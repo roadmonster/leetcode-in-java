@@ -1,5 +1,3 @@
-package com.java;
-
 import java.util.*;
 
 public class WordLadder {
@@ -12,6 +10,7 @@ public class WordLadder {
             int size = q.size();
             for(int i = 0; i < size; i++){
                 String myWord = q.poll();
+                System.out.println("This is queue's popped word " + myWord);
                 if(myWord.equals(end)){
                     return level+1;
                 }
@@ -24,12 +23,15 @@ public class WordLadder {
                         array[j] = letter;
                         String tempWord = new String(array);
                         if(mySet.contains(tempWord)){
+                            System.out.println(tempWord);
                             mySet.remove(tempWord);
                             q.offer(tempWord);
+                            System.out.println("This is my set: " + mySet);
                         }
                     }
                     array[j] = temp;
                 }
+                System.out.println("finished checking one word");
             }
             level++;
         }
@@ -43,6 +45,7 @@ public class WordLadder {
         dict.add("dog");
         dict.add("lot");
         dict.add("log");
+        dict.add("cog");
         String start = "hit";
         String end = "cog";
         System.out.println(new WordLadder().wordLadder(start, end, dict));
