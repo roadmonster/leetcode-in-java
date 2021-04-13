@@ -1,3 +1,5 @@
+package com.java.WordLadder;
+
 import java.util.*;
 
 public class WordLadder {
