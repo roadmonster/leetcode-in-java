@@ -19,14 +19,14 @@ Then it steps through arr1 and check if current object exists or not
   
 ```java
 int i = 0, index = 0;
-        while(i < result.length && index < arr2.length){
-            int count = map.get(arr2[index]);
-            while(count > 0){
-                result[i++] = arr2[index];
-                count--;
-            }
-            index++;
-        };
+while(i < result.length && index < arr2.length){
+    int count = map.get(arr2[index]);
+    while(count > 0){
+        result[i++] = arr2[index];
+        count--;
+    }
+    index++;
+};
 ```
 * Finally solution 1 step through arr2 and update the result array by the map's frequency value.
 The leftover if not empty shall be sorted and appended at the end of the result array.
