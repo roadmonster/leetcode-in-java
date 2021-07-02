@@ -14,5 +14,4 @@
       in the stack that is shorter than the top, and we use the top
       as the left bound of another poll)
   4. if current column smaller than top, then simply push it
-    5.
-    In this way, we calcaulated the height of each poll as we move on
+    5. In this way, we calcaulated the height of each poll as we move on
