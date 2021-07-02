@@ -1,5 +1,12 @@
 package com.java.L121BestTimeSellStock;
 
+/**
+ * Linearly scan the array, update the minPrice as we go,
+ * use the current price minus the minPrice, 'cause the min price can only be
+ * prices before current price including current price
+ * update the maxProfit as we go
+ * O(n)
+ */
 public class Solution {
     public static void main(String[] args) {
         System.out.println(sellStock(new int[]{7,1,5,3,6,4}));
