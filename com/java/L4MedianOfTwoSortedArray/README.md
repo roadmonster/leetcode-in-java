@@ -1,4 +1,5 @@
 ### find median of two sorted array
+* Drop half of the partition every round until find the point where leftHalf of nums1 is less than rightHalf of nums2 and rightHalf of nums1 is greater than leftHalf of nums2
 
 swap the shorter array as the first argument
 
