@@ -13,10 +13,10 @@ public class Solution {
 
     public static List<List<Integer>> threeSum(int[]nums){
         if(nums.length < 3)
-            return new ArrayList<List<Integer>>();
+            return new ArrayList<>();
 
         Arrays.sort(nums);
-        List<List<Integer>>ret = new ArrayList<List<Integer>>();
+        List<List<Integer>>ret = new ArrayList<>();
         for(int i = 0; i < nums.length; i++){
             if(nums[i] > 0)
                 break;
@@ -35,10 +35,13 @@ public class Solution {
             int sum = nums[i] + nums[j];
             if(mySet.contains(-(sum))){
                 ret.add(Arrays.asList(nums[i], nums[j], -(sum)));
+                // fixed bug here, make sure the repeats detection within the
+                // already test triplet
+                while(j < nums.length-1 && nums[j] == nums[j+1]){
+                    j++;
+                }
             }
-            while(j < nums.length-1 && nums[j] == nums[j+1]){
-                j++;
-            }
+
             mySet.add(nums[j]);
         }
     }
