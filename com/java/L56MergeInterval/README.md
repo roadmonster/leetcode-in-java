@@ -1,4 +1,4 @@
-###Merge Intervals
+### Merge Intervals
 
 * algorithm:
 1. put all elements of original array into priority queue(heap sort)
